@@ -1,0 +1,71 @@
+/* reset css */
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,hr{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img,input,textarea,hr,abbr{border:0;}address,caption,cite,code,dfn,em,strong,th,var,i,span,a,strong,small,big,input,textarea{font-style:normal;font-weight:normal;}ol,ul {list-style:none;}caption,th {text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight: bold;}q:before,q:after{content:'';}
+
+/* usp corpsite reset */
+    strong {font-weight:bold;}
+    em, em span {font-style:italic;}
+    a {cursor:pointer;text-decoration:none;color:#000;}
+    a:hover {color:#df0000;}
+    a:link {outline:none;}
+    legend, .hidden {display:none;}
+    input, select, textarea {padding:2px 4px;margin:0; overflow: visible; }
+    button {display:block;border:0;float:left;background:transparent;overflow:hidden}
+    .fih {display:none;}
+    div.boolean input, div.radio input {width:13px;height:13px;background-color:#fff; margin: 5px 5px 0 0; cursor: pointer; }
+    button, .fib input, select, option, label.radio, label.collection_radio, label.boolean {cursor:pointer;}
+    html,body {width:100%;height:100%; font-size: 14px; line-height: 20px;color:#000;} 
+    html,body,a,a:hover,input,select,textarea {font-family: Tahoma, Helvetica, Arial, Verdana, sans-serif;}
+    div {clear: both;overflow: hidden;}
+    /*abbr {padding: 2px 5px;}*/
+    img {display: block;}
+    
+
+/* grid */
+body{background-color:#c1d7ff}
+#h, #c, #f {width: 100%;}
+#h-, #c-, #f- {margin:0 auto;width:800px;padding-right:10px;}
+
+
+
+
+/*header */
+#home{text-align:center;background: transparent url(../images/home.png) no-repeat 50% 0;}
+#t {height:100px;padding-top:20px;}
+#t h1{font-size:48px;line-height:52px;}
+#h img{float:right;}
+#h .personalInfo{float:left;width:100%;text-align:left;}
+
+/* content*/
+#c {background: transparent url(../images/c.png) repeat-y 50% 0;}
+#c-{padding-top:50px;}
+
+/* footer */
+#f {background: transparent url(../images/f.png) no-repeat 50% 100%;}
+#f p{padding:50px 0;font-size:11px;line-height:16px;}
+
+
+/* sections */
+.section .header h3{color:#4f81bd;font-size:20px;line-height:26px;font-family:Calibri,sans-serif;text-transform:uppercase;font-style:italic;border-bottom: 1px solid #4F81BD;width:600px;margin:50px 0 20px;}
+.section .content ul{padding-left:18px;margin-top:5px;}
+.section .content ul li{list-style:disc;line-height:20px;margin-bottom:7px;}
+
+
+.personalInfo .fn h2{font-size:28px;line-height:34px;color:#4f81bd;margin-bottom:22px;font-family:Calibri,sans-serif;}
+.personalInfo .content{font-size:16px;line-height:24px;}
+.personalInfo .vcard{width:300px;float:left;}
+.personalInfo .vcard dt, .personalInfo .vcard dd{float:left;margin-bottom:10px;}
+.personalInfo .vcard dt{width:80px;clear:both;font-weight:bold;}
+.personalInfo .vcard dd{width:300px;}
+.personalInfo .vcard dl dd.address{clear: both;}
+
+#h- img:hover {border-width:1px;border-color:rgba(79,129,189,.5);border-style:solid;}
+
+
+table{width:100%;}
+table td{vertical-align:top;border:1px solid #000;padding:5px;}
+.education table td.date{width:150px;}
+
+.actions{clear:both;margin-top:10px;float:left;font-size:12px;line-height:14px;} 
+
+    
+    

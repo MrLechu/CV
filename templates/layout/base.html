@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{% block title %}Leszek Cybulski | Curriculum Vitae{% endblock %}</title>
+    <meta http-equiv="content-type"
+    content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="{% get_static_prefix %}css/style.css" type="text/css" media="all" />
+  </head>
+  <body>
+    <div id="lc">
+      <div id="home">
+        <div id="t">
+          <div id="t-">
+            <h1>Curriculum Vitae</h1>
+          </div>
+        </div>
+        <div id="h">
+          <div id="h-">
+            {% block personal_info %}
+            <div class="section personalInfo">
+              <div class="content">
+                {% block vcard %}{% endblock %}
+                <img src="{% get_static_prefix %}images/photo.jpg" width="152" height="167" alt="Leszek Cybulski" title="Leszek Cybulski" />
+                <div class="actions">
+                  <a href="saveAsPDF" title="Zapisz moje CV w pliku PDF">Zapisz w pliku pdf</a>
+                </div>
+              </div>
+            </div>
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+      <div id="c">
+        <div id="c-">
+          {% block content %}{% endblock %}
+        </div>
+    </div>
+      <div id="f">
+        <div id="f-">
+          <p>
+            Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w&nbsp;mojej ofercie pracy dla potrzeb niezbędnych
+            do realizacji procesu rekrutacji (zgodnie z&nbsp;ustawą z&nbsp;dn.29.08.1997r. o Ochronie Danych Osobowych).
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="{% get_static_prefix %}js/application.js"></script>
+    <script type="text/javascript" src="{% get_static_prefix %}js/cufon/cufon-yui.js"></script>
+    <script type="text/javascript" src="{% get_static_prefix %}js/cufon/cufon.js"></script>
+    
+  </body>
+</html>

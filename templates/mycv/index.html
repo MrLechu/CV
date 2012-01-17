@@ -1,0 +1,136 @@
+{% extends "layout/base.html" %}
+
+
+{% block vcard %}
+{% for vcard in vcards %}
+<div class="vcard">
+  <div class="fn">
+    <h2>{{ vcard.name }}</h2>
+  </div>
+  <div class="birthday">
+    Data ur: {{ vcard.birthday }}
+  </div>
+  <div class="adr">
+    <div class="street-address">
+      {{ vcard.street }}
+    </div>
+    <span class="postal-code">{{ vcard.postalCode }}</span> <span class="locality">{{ vcard.city }}</span>
+  </div>
+  <div class="tel">
+    Tel: {{ vcard.phone }}
+  </div>
+  <div>
+    Email: <span class="email">{{ vcard.email }}</span>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+
+{% if educations %}
+ <div class="section education">
+    <div class="header">
+      <h3>Wykształcenie</h3>
+    </div>
+    <div class="content">
+      <table>
+        {% for education in educations %}
+        <tr>
+          <td class="date">{{ education.dateStart|date:"Y" }} - {{ education.dateEnd|date:"Y" }}</td>
+          <td><strong>{{ education.school }}</strong><br />
+            {{ education.specialization }}
+          </td>
+        </tr>
+      {% endfor %}
+      </table>
+    </div>
+  </div>
+{% endif %}
+
+{% if experiences %}  
+  <div class="section experience">
+    <div class="header">
+      <h3>Doświadczenie zawodowe</h3>
+    </div>
+    <div class="content">
+      <table>
+        {% for experience in experiences %}
+        <tr>
+          <td>
+            {{ experience.dateStart|date:"m.Y" }} - {{ experience.dateEnd|date:"m.Y" }}<br />
+            <strong>{{ experience.company }}</strong>
+          </td>
+          <td>
+            {{ experience.position }}<br /><br />
+            {{ experience.description|safe }}
+          </td>
+        </tr>
+      {% endfor %}
+      </table>
+    </div>
+  </div>
+{% endif %}
+
+{% if courses %}
+  <div class="section courses">
+    <div class="header">
+      <h3>Kursy</h3>
+    </div>
+    <div class="content">
+      <table>
+        {% for course in courses %}
+        <tr>
+          <td>
+            <strong>{{ course.title }}</strong><br />
+            {{ course.description }}
+          </td>                  
+        </tr>
+        {% endfor %}                
+      </table>
+    </div>
+  </div>
+{% endif %}
+
+{% if skills %}  
+  <div class="section skills">
+    <div class="header">
+      <h3>Umiejętności</h3>
+    </div>
+    <div class="content">
+     {% for skill in skills %}
+      {{ skill.description|safe }}</li>
+     {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% if languages %}  
+  <div class="section languages">
+    <div class="header">
+      <h3>Języki</h3>
+    </div>
+    <div class="content">
+      <ul>
+        {% for language in languages %}
+        <li>{{ language.name }}</li>
+        {% endfor %}
+      </ul> 
+    </div>
+  </div>
+{% endif %}
+
+{% if interests %}  
+  <div class="section interest">
+    <div class="header">
+      <h3>Zainteresowania</h3>
+    </div>
+    <div class="content">
+      {% for interest in interests %}
+      {{ interest.description|safe }}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% endblock %}
