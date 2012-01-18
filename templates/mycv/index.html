@@ -20,7 +20,7 @@
     Tel: {{ vcard.phone }}
   </div>
   <div>
-    Email: <span class="email">{{ vcard.email }}</span>
+    Email: <span class="email"><a href="mailto:{{ vcard.email }}">{{ vcard.email }}</a></span>
   </div>
 </div>
 {% endfor %}
@@ -62,7 +62,7 @@
             <strong>{{ experience.company }}</strong>
           </td>
           <td>
-            {{ experience.position }}<br />
+            Praca na stanowisku: {{ experience.position }}<br /><br />
             {{ experience.description|safe }}
           </td>
         </tr>
@@ -75,7 +75,7 @@
 {% if courses %}
   <div class="section courses">
     <div class="header">
-      <h3>Kursy</h3>
+      <h3>Odbyte kursy</h3>
     </div>
     <div class="content">
       <table>
@@ -83,7 +83,7 @@
         <tr>
           <td>
             <strong>{{ course.title }}</strong><br />
-            {{ course.description }}
+            {{ course.description|safe }}
           </td>                  
         </tr>
         {% endfor %}                
@@ -134,3 +134,16 @@
 {% endif %}
 
 {% endblock %}
+
+{% block welcome %}
+<div class="welcome_wrapper">
+  <div class="welcome">
+    <span class="close" title="Zamknij okno">close</span>
+    <p>Dzień dobry,<br /><br />Aktualnie poszuję pracy na stanowisku <strong>Front-End Developer</strong>.<br />Jeśli Ktoś był by zainteresowany moją osobą zachęcam do lektury mojego CV.</p>
+    <p class="sign">
+      Z poważaniem,<br />
+      <a href="mailto:{{ vc.email }}">Leszek Cybulski</a>
+    </p>
+  </div>
+</div>
+{% endblock %} 

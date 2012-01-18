@@ -11,7 +11,6 @@
     <script type="text/javascript" src="{% get_static_prefix %}js/jquery-1.7.1.min.js"></script>
   </head>
   <body>
-    <a href="{{ url }}" title="Zapisz moje CV w pliku PDF">Zapisz w pliku pdf</a>
     <div id="lc">
       <div id="home">
         <div id="t">
@@ -48,17 +47,8 @@
           </p>
         </div>
       </div>
-      <div class="welcome_wrapper">
-        <div class="welcome">
-          <span class="close" title="Zamknij okno">close</span>
-          <p>Dzień dobry,<br /><br />Aktualnie poszuję pracy na stanowisku <strong>Front End Developer</strong>.<br />Jeśli Ktoś był by zainteresowany moją osobą zachęcam do lektury mojego CV.</p>
-          <p class="sign">
-            Z poważaniem,<br />
-            Leszek Cybulski
-          </p>
-        </div>
-      </div>
-      
+      {% block welcome %}{% endblock %}
+    
     </div> <!-- #lc -->
     <script type="text/javascript" src="{% get_static_prefix %}js/application.js"></script>
     <script type="text/javascript" src="{% get_static_prefix %}js/cufon/cufon-yui.js"></script>

@@ -4,8 +4,8 @@
 /* usp corpsite reset */
     strong {font-weight:bold;}
     em, em span {font-style:italic;}
-    a {cursor:pointer;text-decoration:none;color:#000;}
-    a:hover {color:#df0000;}
+    a {cursor:pointer;text-decoration:underline;color:#000;}
+    a:hover {text-decoration:none;color:#4d5666;}
     a:link {outline:none;}
     legend, .hidden {display:none;}
     input, select, textarea {padding:2px 4px;margin:0; overflow: visible; }
@@ -55,7 +55,7 @@ body{background-color:#c1d7ff}
 
 
 .personalInfo .fn h2{font-size:28px;line-height:34px;color:#4f81bd;margin-bottom:22px;font-family:Calibri,sans-serif;}
-.personalInfo .content{font-size:16px;line-height:24px;}
+.personalInfo .content{font-size:16px;line-height:28px;}
 .personalInfo .vcard{width:300px;float:left;}
 .personalInfo .vcard dt, .personalInfo .vcard dd{float:left;margin-bottom:10px;}
 .personalInfo .vcard dt{width:80px;clear:both;font-weight:bold;}
@@ -66,8 +66,8 @@ body{background-color:#c1d7ff}
 
 
 table{width:100%;}
-table td{vertical-align:top;border:1px solid #000;padding:10px;}
-.education table td.date{width:150px;}
+table td{vertical-align:top;border:1px solid #4f81bd;padding:10px;}
+.education table td.date{width:160px;}
 
 .actions{clear:both;margin-top:10px;float:left;font-size:12px;line-height:14px;} 
 
