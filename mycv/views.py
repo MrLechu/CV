@@ -1,7 +1,10 @@
-#from django.template import Context, loader
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
 from cv.mycv.models import vcard, education, experience, course, skill, language, interest
 from django.http import HttpResponse
+
+
+
 
 def index(request):
     vcards = vcard.objects.all()
@@ -22,4 +25,3 @@ def index(request):
         'languages': languages,
         'interests': interests
     })
-
