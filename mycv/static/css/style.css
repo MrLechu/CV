@@ -24,8 +24,12 @@
 body{background-color:#c1d7ff}
 #h, #c, #f {width: 100%;}
 #h-, #c-, #f- {margin:0 auto;width:800px;padding-right:10px;}
+#lc{position:relative;}
 
 
+.close {background-image: url(../images/sprite.png);background-repeat: no-repeat;background-color: transparent;}
+
+.close {text-indent:-99999em;width:100%;height:100%;display:block;}
 
 
 /*header */
@@ -62,10 +66,22 @@ body{background-color:#c1d7ff}
 
 
 table{width:100%;}
-table td{vertical-align:top;border:1px solid #000;padding:5px;}
+table td{vertical-align:top;border:1px solid #000;padding:10px;}
 .education table td.date{width:150px;}
 
 .actions{clear:both;margin-top:10px;float:left;font-size:12px;line-height:14px;} 
+
+.welcome_wrapper{
+  position:absolute;top:10%;margin:0 auto;z-index:2000;width:100%;height: 100%;
+}
+.welcome{background-color: #fff;border:3px solid #ccc;padding:20px;font-size:16px;line-height:26px;margin:0 auto;width:500px;border-radius:10px;position:relative;}
+.welcome .close{width:36px;height:36px;background-position: 0 0;position:absolute;right:5px;top:5px;cursor:pointer;}
+.welcome .close:hover{background-position: 0 -36px;}
+.welcome .sign{margin-top:40px;}
+.overlay{
+    position:fixed;left:0;top:0;background-color: #000;width:100%;height:100%;z-index:1000; 
+  } 
+}
 
     
     

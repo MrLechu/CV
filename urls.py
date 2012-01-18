@@ -13,9 +13,8 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
-    (r'^mycv/$', 'cv.mycv.views.index'),
-    (r'^static/admin/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/lechu/apps/cv/templates/'}),
     
+    url(r'^$', include('cv.mycv.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^static/admin/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/lechu/apps/cv/templates/'}),
 )
-
