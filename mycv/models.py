@@ -61,7 +61,15 @@ class language(models.Model):
 class interest(models.Model):
     description = models.TextField(max_length=255)
     def __unicode__(self):
-        return self.description    
+        return self.description  
+    
+class MetaHtml(models.Model):
+    description = models.CharField(max_length=255)
+    keywords = models.CharField(max_length=255)
+    def __unicode__(self):
+        return "Meta tagi"     
+    
+      
     
     
     

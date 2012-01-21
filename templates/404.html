@@ -1,2 +1,30 @@
-<h2>Strona o podanym adresie nie istnieje</h2>
-<a href="/mycv" title="powrót na stronę główną">powrót na stronę główną &raquo;</a>
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{% block title %}Leszek Cybulski | Curriculum Vitae | Strona o podanym adresie nie istnieje{% endblock %}</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="{% get_static_prefix %}css/style.css" type="text/css" media="all" />
+  </head>
+  <body id="error">
+    <div id="lc">
+      <div id="c">
+        <div id="c-">
+          {% block content %}
+          <div class="section error">
+            <div class="header">
+              <h2>Błąd 404</h2>
+            </div>
+            <div class="content">
+              <p>Strona o podanym adresie nie istnieje.</p>
+              <a href="/" title="powrót na stronę główną">powrót na stronę główną &raquo;</a>    
+            </div>
+          </div>
+          {% endblock %}
+        </div>
+      </div>
+    </div> <!-- #lc -->
+  </body>
+</html>

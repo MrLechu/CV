@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.conf import settings
-from cv.mycv.models import vcard, education, experience, course, skill, language, interest
+from cv.mycv.models import vcard, education, experience, course, skill, language, interest, MetaHtml
 
 class PostAdmin(admin.ModelAdmin):
     class Media:
@@ -15,6 +15,7 @@ admin.site.register(course)
 admin.site.register(skill)
 admin.site.register(language)
 admin.site.register(interest)
+admin.site.register(MetaHtml)
 
 
 

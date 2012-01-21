@@ -2,7 +2,7 @@
 
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response, get_object_or_404
-from cv.mycv.models import vcard, education, experience, course, skill, language, interest
+from cv.mycv.models import vcard, education, experience, course, skill, language, interest, MetaHtml
 from django.http import HttpResponse
 
 def index(request):
@@ -13,6 +13,7 @@ def index(request):
     skills = skill.objects.all()
     languages = language.objects.all()
     interests = interest.objects.all()
+    metas = MetaHtml.objects.all()
     
     vc = vcard.objects.get(pk=1)
   
