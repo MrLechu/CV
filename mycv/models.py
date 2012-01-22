@@ -30,7 +30,7 @@ class education(models.Model):
 class experience(models.Model):
     dateStart = models.DateField()
     dateEnd = models.DateField()
-    company = models.CharField(max_length=50)
+    company = models.CharField(max_length=100)
     position = models.CharField(max_length=50)
     description = models.TextField(max_length=255)
     recordListingId = models.IntegerField(editable=False, null=True)

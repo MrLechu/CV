@@ -8,8 +8,9 @@
     <h2>{{ vcard.name }}</h2>
   </div>
   <div class="birthday">
-    Data ur: {{ vcard.birthday }}
+    Data ur. {{ vcard.birthday }}
   </div>
+  {% comment %}
   <div class="adr">
     <div class="street-address">
       {{ vcard.street }}
@@ -19,9 +20,14 @@
   <div class="tel">
     Tel: {{ vcard.phone }}
   </div>
+  {% endcomment %}
   <div>
     Email: <span class="email"><a href="mailto:{{ vcard.email }}">{{ vcard.email }}</a></span>
   </div>
+  <div class="goldenline">
+    Profil <a href="http://www.goldenline.pl/leszek-cybulski" title="Profil Goldenline" rel="external">Goldenline</a>
+  </div>
+  
 </div>
 {% endfor %}
 {% endblock %}
@@ -57,9 +63,9 @@
       <table>
         {% for experience in experiences %}
         <tr>
-          <td>
-            {{ experience.dateStart|date:"m.Y" }} - {{ experience.dateEnd|date:"m.Y" }}<br />
-            <strong>{{ experience.company }}</strong>
+          <td class="date">
+            {{ experience.dateStart|date:"m.Y" }} - {{ experience.dateEnd|date:"m.Y" }}
+            <strong>{{ experience.company|safe }}</strong>
           </td>
           <td>
             Praca na stanowisku: {{ experience.position }}<br /><br />
@@ -99,7 +105,7 @@
     </div>
     <div class="content">
      {% for skill in skills %}
-      {{ skill.description|safe }}</li>
+      {{ skill.description|safe }}
      {% endfor %}
     </div>
   </div>
@@ -139,7 +145,7 @@
 <div class="welcome_wrapper">
   <div class="welcome">
     <span class="close" title="Zamknij okno">close</span>
-    <p>Dzień dobry,<br /><br />Aktualnie poszuję pracy na stanowisku <strong>Front-End Developer</strong>.<br />Jeśli Ktoś był by zainteresowany moją osobą zachęcam do lektury mojego CV.</p>
+    <p>Dzień dobry,<br /><br />Aktualnie poszukuję pracy na stanowisku <strong>Front-End Developer</strong>.<br />Jeśli jesteś zainteresowany moją osobą zachęcam do lektury mojego CV.</p>
     <p class="sign">
       Z poważaniem,<br />
       <a href="mailto:{{ vc.email }}">Leszek Cybulski</a>
