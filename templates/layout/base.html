@@ -5,7 +5,7 @@
   <head>
     <title>{% block title %}Leszek Cybulski | Curriculum Vitae{% endblock %}</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no "/>
     {% block meta %}
       {% for meta in metas %}
         <meta name="keywords" content="{{ meta.keywords }}" />
@@ -43,7 +43,7 @@
           <div class="section personalInfo">
             <div class="content">
               {% block vcard %}{% endblock %}
-              <img src="{% get_static_prefix %}images/photo.jpg" width="150" height="165" alt="inż. Leszek Cybulski" title="inż. Leszek Cybulski" />
+              <img src="{% get_static_prefix %}images/photo.jpg" width="150" height="165" alt="inż. Leszek Cybulski" title="inż. Leszek Cybulski" id="big_photo" />
             </div>
           </div>
           {% endblock %}
@@ -66,7 +66,7 @@
           </div>
           <div id="bookmark" title="Zobacz jakiej pracy szukam"><span>zobacz jakiej<br />pracy szukam</span></div>
         </div>              
-      </div>    
+      </div> 
     </div> <!-- #lc -->
     <script type="text/javascript" src="{% get_static_prefix %}js/application.js"></script>
     <script type="text/javascript" src="{% get_static_prefix %}js/cufon/cufon-yui.js"></script>

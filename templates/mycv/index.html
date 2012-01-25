@@ -1,12 +1,15 @@
 {% extends "layout/base.html" %}
 
+{% load static %}
 
 {% block vcard %}
 {% for vcard in vcards %}
+
 <div class="vcard">
   <div class="fn">
     <h2>{{ vcard.name }}</h2>
   </div>
+  <div class="mobile_photo"><img src="{% get_static_prefix %}images/mobile_photo.jpg" width="90" height="99" alt="inż. Leszek Cybulski" title="inż. Leszek Cybulski" /></div>  
   <div class="birthday">
     Data ur. {{ vcard.birthday }}
   </div>
@@ -21,7 +24,7 @@
     Tel: {{ vcard.phone }}
   </div>
   {% endcomment %}
-  <div>
+  <div class="email">
     Email: <span class="email"><a href="mailto:{{ vcard.email }}">{{ vcard.email }}</a></span>
   </div>
   <div class="goldenline">
@@ -35,45 +38,46 @@
 {% block content %}
 
 {% if educations %}
- <div class="section education">
-    <div class="header">
-      <h3>Wykształcenie</h3>
-    </div>
-    <div class="content">
-      <table>
-        {% for education in educations %}
-        <tr>
-          <td class="date">{{ education.dateStart|date:"Y" }} - {{ education.dateEnd|date:"Y" }}</td>
-          <td><strong>{{ education.school }}</strong><br />
-            {{ education.specialization }}
-          </td>
-        </tr>
-      {% endfor %}
-      </table>
-    </div>
-  </div>
+ <div class="section educations">
+   <div class="header"><h3>Wykształcenie</h3></div>
+   <div class="content">
+     <div class="table education">
+       {% for education in educations %}
+       <div class="edu row {% cycle 'odd' 'even' %}">
+         <div class="cl date">
+           {{ education.dateStart|date:"Y" }} - {{ education.dateEnd|date:"Y" }}
+         </div>
+         <div class="cr">
+           <strong>{{ education.school }}</strong><br />
+           {{ education.specialization }}
+         </div>
+       </div>
+       {% endfor %}
+     </div>
+   </div>
+ </div>
 {% endif %}
 
 {% if experiences %}  
-  <div class="section experience">
+  <div class="section experiences">
     <div class="header">
       <h3>Doświadczenie zawodowe</h3>
     </div>
     <div class="content">
-      <table>
-        {% for experience in experiences %}
-        <tr>
-          <td class="date">
-            {{ experience.dateStart|date:"m.Y" }} - {{ experience.dateEnd|date:"m.Y" }}
+     <div class="table experience">
+       {% for experience in experiences %}
+       <div class="exp row {% cycle 'odd' 'even' %}">
+         <div class="cl date">
+           {{ experience.dateStart|date:"m.Y" }} - {{ experience.dateEnd|date:"m.Y" }}
             <strong>{{ experience.company|safe }}</strong>
-          </td>
-          <td>
+         </div>
+         <div class="cr">
             Praca na stanowisku: {{ experience.position }}<br /><br />
             {{ experience.description|safe }}
-          </td>
-        </tr>
-      {% endfor %}
-      </table>
+         </div>
+       </div>
+       {% endfor %}
+     </div>      
     </div>
   </div>
 {% endif %}
@@ -84,16 +88,14 @@
       <h3>Odbyte kursy</h3>
     </div>
     <div class="content">
-      <table>
-        {% for course in courses %}
-        <tr>
-          <td>
-            <strong>{{ course.title }}</strong><br />
-            {{ course.description|safe }}
-          </td>                  
-        </tr>
-        {% endfor %}                
-      </table>
+     <div class="table experience">
+       {% for course in courses %}
+       <div class="course row {% cycle 'odd' 'even' %}">
+        <strong>{{ course.title }}</strong><br />
+        {{ course.description|safe }}
+       </div>
+       {% endfor %}
+     </div>
     </div>
   </div>
 {% endif %}

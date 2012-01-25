@@ -23,6 +23,7 @@
 
 /* grid */
 body{background-color:#c1d7ff;min-width:855px;}
+
 #lc{position:relative;}
 #h, #c, #f, #s {width: 100%;}
 #h-, #c-, #f-, #t-, #s- {margin:0 auto;width:800px;padding-right:10px;}
@@ -31,6 +32,8 @@ body{background-color:#c1d7ff;min-width:855px;}
 
 .close {text-indent:-99999em;width:100%;height:100%;display:block;}
 
+.mobile_photo{display:none;}
+
 /*header */
 #h {text-align:center;background: transparent url(../images/home.png) no-repeat 50% 0;position:relative;}
 #h h1{font-size:48px;line-height:52px;}
@@ -38,6 +41,8 @@ body{background-color:#c1d7ff;min-width:855px;}
 #c img{float:right;border-width:3px;border-color:#a6bfdd;border-style:solid;}
 #c .personalInfo{float:left;width:100%;text-align:left;}
 #s{position:absolute;z-index:50;top:0;overflow:visible;}
+
+
 
 /* content*/
 #c {background: transparent url(../images/c.png) repeat-y 50% 0;}
@@ -52,7 +57,6 @@ body{background-color:#c1d7ff;min-width:855px;}
 .section .content ul{padding-left:18px;margin-top:5px;}
 .section .content ul li{list-style:disc;line-height:20px;margin-bottom:7px;}
 
-
 .personalInfo .fn h2{font-size:28px;line-height:34px;color:#4f81bd;margin-bottom:22px;font-family:Calibri,sans-serif;}
 .personalInfo .content{font-size:16px;line-height:28px;}
 .personalInfo .vcard{width:300px;float:left;}
@@ -61,10 +65,20 @@ body{background-color:#c1d7ff;min-width:855px;}
 .personalInfo .vcard dd{width:300px;}
 .personalInfo .vcard dl dd.address{clear: both;}
 
-table{width:100%;}
+/*table{width:100%;}
 table td{vertical-align:top;border:1px solid #4f81bd;padding:10px;}
 table td.date{width:160px;background-color:#eee;}
-table td.date strong{display:block;margin-top:5px;}
+table td.date strong{display:block;margin-top:5px;}*/
+
+.table{border:1px solid #4F81BD;border-bottom-width:0}
+.row{clear:both;border:1px solid #4F81BD;background-color:#eee;border-width:1px 0;}
+.row.odd{border-top-width:0;}
+.row.even{border-top-width:0;}
+.row .cl, .row .cr {padding:10px;}
+.row .cl{float:left;width:160px;}
+.row .cr{float:left;width:597px;clear:none;border:1px solid #4F81BD;border-width:0 0 0 1px;background-color: #fff;}
+.row.course{background-color: #fff;padding:10px;}
+.row .date strong{display:block}
 
 .actions{clear:both;margin-top:10px;float:left;font-size:12px;line-height:14px;} 
 
@@ -84,10 +98,44 @@ table td.date strong{display:block;margin-top:5px;}
 
 /*mobile*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+/* padding */
 
-.welcome {width:auto;}
-#home,#c,#f{background: #fff;}
+ 
+  
+body{min-width:100%;background-color: #fff;}  
+#s{display:none;}
+
+.mobile_photo{display:block;float:left;margin-right:7px;}
+  
+#h-,#c-,#f-,#s-{background: #fff;padding:0;margin:0;background-color: #fff;}
+
+.section .header h3{margin-top:25px;padding-left:3px;}
+.languages .header h3{padding-left:5px;}
+
+#h {text-align:left;}
+#h h1{font-size:40px;line-height:50px;margin-bottom:30px;margin-left: 3px;}
+
+#big_photo{display:none;}
+.table{border:none;}
+
+.row .cl{background-color:#eee;clear:both;}
+.row .cr{border:none;}
+.row{border:none;background:none;}
+.row.even{border-top-width:1px;}
+.row{margin-bottom:20px;}
+
+
+.row.course, .row .cr, .vcard {padding: 0 0 0 2px;}
+.row .cl{margin-bottom:5px;padding-left:3px;}
+
+.experience .row .cr, .education .row .cr{clear:both;}
+.vcard .birthday, .vcard .email, .vcard .tel,.vcard .goldenline{clear:none;}
+
+#f- {padding-left:3px;}
 }
+
+
+
 
 /* slider menu */
 #smenu{
