@@ -18,25 +18,26 @@
     div {clear: both;overflow: hidden;}
     /*abbr {padding: 2px 5px;}*/
     img {display: block;}
+    #ajax-loader{width:auto;height:auto;position:absolute;right:0;top:10px;display:none;}
     
 
 /* grid */
-body{background-color:#c1d7ff}
-#h, #c, #f {width: 100%;}
-#h-, #c-, #f- {margin:0 auto;width:800px;padding-right:10px;}
+body{background-color:#c1d7ff;min-width:855px;}
+#lc{position:relative;}
+#h, #c, #f, #s {width: 100%;}
+#h-, #c-, #f-, #t-, #s- {margin:0 auto;width:800px;padding-right:10px;}
 
-
-.close {background-image: url(../images/sprite.png);background-repeat: no-repeat;background-color: transparent;}
+.close,#bookmark {background-image: url(../images/sprite.png);background-repeat: no-repeat;background-color: transparent;}
 
 .close {text-indent:-99999em;width:100%;height:100%;display:block;}
 
-
 /*header */
-#home{text-align:center;background: transparent url(../images/home.png) no-repeat 50% 0;}
-#t {height:100px;padding-top:20px;}
-#t h1{font-size:48px;line-height:52px;}
-#h img{float:right;}
-#h .personalInfo{float:left;width:100%;text-align:left;}
+#h {text-align:center;background: transparent url(../images/home.png) no-repeat 50% 0;position:relative;}
+#h h1{font-size:48px;line-height:52px;}
+#h-{position:relative;}
+#c img{float:right;border-width:3px;border-color:#a6bfdd;border-style:solid;}
+#c .personalInfo{float:left;width:100%;text-align:left;}
+#s{position:absolute;z-index:50;top:0;overflow:visible;}
 
 /* content*/
 #c {background: transparent url(../images/c.png) repeat-y 50% 0;}
@@ -45,7 +46,6 @@ body{background-color:#c1d7ff}
 /* footer */
 #f {background: transparent url(../images/f.png) no-repeat 50% 100%;}
 #f p{padding:50px 0;font-size:11px;line-height:16px;}
-
 
 /* sections */
 .section .header h3{color:#4f81bd;font-size:20px;line-height:26px;font-family:Calibri,sans-serif;text-transform:uppercase;font-style:italic;border-bottom: 1px solid #4F81BD;width:600px;margin:50px 0 20px;}
@@ -61,9 +61,6 @@ body{background-color:#c1d7ff}
 .personalInfo .vcard dd{width:300px;}
 .personalInfo .vcard dl dd.address{clear: both;}
 
-#h- img {border-width:3px;border-color:#a6bfdd;border-style:solid;}
-
-
 table{width:100%;}
 table td{vertical-align:top;border:1px solid #4f81bd;padding:10px;}
 table td.date{width:160px;background-color:#eee;}
@@ -71,12 +68,12 @@ table td.date strong{display:block;margin-top:5px;}
 
 .actions{clear:both;margin-top:10px;float:left;font-size:12px;line-height:14px;} 
 
-.welcome_wrapper{position:absolute;top:10%;margin:0 auto;z-index:2000;width:100%;height: 100%;}
+/*.welcome_wrapper{position:absolute;top:10%;margin:0 auto;z-index:2000;width:100%;height: 100%;}
 .welcome{background-color: #fff;border:3px solid #a6bfdd;padding:20px;font-size:16px;line-height:26px;margin:0 auto;width:500px;border-radius:10px;position:relative;display:none;}
 .welcome .close{width:36px;height:36px;background-position: 0 0;position:absolute;right:5px;top:5px;cursor:pointer;}
 .welcome .close:hover{background-position: 0 -36px;}
 .welcome .sign{margin-top:40px;}
-.overlay{position:fixed;left:0;top:0;background-color: #000;width:100%;height:100%;z-index:1000;} 
+.overlay{position:fixed;left:0;top:0;background-color: #000;width:100%;height:100%;z-index:1000;}*/ 
     
 /* 404, 500 */
 #error #c{background: none;}
@@ -91,4 +88,35 @@ table td.date strong{display:block;margin-top:5px;}
 .welcome {width:auto;}
 #home,#c,#f{background: #fff;}
 }
+
+/* slider menu */
+#smenu{
+  margin:0 auto;display:none;border:1px solid #8db6ff;border-width:0 1px 1px 1px;width:500px;z-index:100;padding:20px 30px 30px;line-height:28px;
+  background-image: linear-gradient(top, #FFFFFF 34%, #FFFFFF 51%, #C1D7FF 115%);
+  background-image: -o-linear-gradient(top, #FFFFFF 34%, #FFFFFF 51%, #C1D7FF 115%);
+  background-image: -moz-linear-gradient(top, #FFFFFF 34%, #FFFFFF 51%, #C1D7FF 115%);
+  background-image: -webkit-linear-gradient(top, #FFFFFF 34%, #FFFFFF 41%, #C1D7FF 115%);
+  background-image: -ms-linear-gradient(top, #FFFFFF 34%, #FFFFFF 51%, #C1D7FF 115%);  
+
+  border-radius:0 0px 0px 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.80);
+  -moz-box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.80);
+  -webkit-box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.80);    
+  
+/* For Internet Explorer 5.5 - 7 */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#C1D7FF);
+      /* For Internet Explorer 8 */
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#C1D7FF)";    
+      background-color: #CCC;   
+}
+#bookmark{width:128px;height:60px;background-position:-36px 0;cursor:pointer;padding-top:5px;padding-left:8px;float:right;margin-right:90px;}
+#bookmark span{opacity:0.9;background-color:#fff;font-size:16px;line-height:20px;display:block;float:right;padding:5px;}
+#bookmark span:hover{color:#4d5666;}
 

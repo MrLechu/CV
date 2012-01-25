@@ -31,28 +31,22 @@
   </head>
   <body>
     <div id="lc">
-      <h2>{{ flavor }}</h2>
-      <div id="home">
-        <div id="t">
-          <div id="t-">
-            <h1>Curriculum Vitae</h1>
-          </div>
-        </div>
         <div id="h">
           <div id="h-">
-            {% block personal_info %}
-            <div class="section personalInfo">
-              <div class="content">
-                {% block vcard %}{% endblock %}
-                <img src="{% get_static_prefix %}images/photo.jpg" width="150" height="165" alt="inż. Leszek Cybulski" title="inż. Leszek Cybulski" />
-              </div>
-            </div>
-            {% endblock %}
+            <h1>Curriculum Vitae</h1>
+            <img src="{% get_static_prefix %}images/ajax-loader.gif" alt="Ajax loader" id="ajax-loader" />
           </div>
         </div>
-      </div>
-      <div id="c">
+       <div id="c">
         <div id="c-">
+          {% block personal_info %}
+          <div class="section personalInfo">
+            <div class="content">
+              {% block vcard %}{% endblock %}
+              <img src="{% get_static_prefix %}images/photo.jpg" width="150" height="165" alt="inż. Leszek Cybulski" title="inż. Leszek Cybulski" />
+            </div>
+          </div>
+          {% endblock %}
           {% block content %}{% endblock %}
         </div>
       </div>
@@ -65,7 +59,14 @@
         </div>
       </div>
       {% block welcome %}{% endblock %}
-    
+      <div id="s">
+        <div id="s-">
+          <div id="smenu">
+            <p>Dzień dobry,<br />Aktualnie poszukuję pracy na stanowisku <strong>Front-End Developer</strong>.<br />Jeśli jesteś zainteresowany moją osobą zachęcam do lektury mojego CV.</p>
+          </div>
+          <div id="bookmark" title="Zobacz jakiej pracy szukam"><span>zobacz jakiej<br />pracy szukam</span></div>
+        </div>              
+      </div>    
     </div> <!-- #lc -->
     <script type="text/javascript" src="{% get_static_prefix %}js/application.js"></script>
     <script type="text/javascript" src="{% get_static_prefix %}js/cufon/cufon-yui.js"></script>
