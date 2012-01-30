@@ -17,7 +17,7 @@ class vcard(models.Model):
 class education(models.Model):
     dateStart = models.DateField()
     dateEnd = models.DateField()
-    school = models.CharField(max_length=50)
+    school = models.CharField(max_length=255)
     specialization = models.CharField(max_length=200)
     #description = models.TextField(max_length=255, null=True)
     

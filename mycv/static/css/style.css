@@ -118,7 +118,7 @@ body{min-width:100%;background-color: #fff;}
 #big_photo{display:none;}
 .table{border:none;}
 
-.row .cl{background-color:#eee;clear:both;}
+.row .cl{background-color:#eee;clear:both;width:200px;}
 .row .cr{border:none;}
 .row{border:none;background:none;}
 .row.even{border-top-width:1px;}
