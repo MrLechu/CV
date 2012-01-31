@@ -30,6 +30,9 @@
   <div class="goldenline">
     Profil <a href="http://www.goldenline.pl/leszek-cybulski" title="Profil Goldenline" rel="external">Goldenline</a>
   </div>
+  <div class="social_utility">
+    <g:plusone size="small"></g:plusone>
+  </div>  
   
 </div>
 {% endfor %}
@@ -39,7 +42,10 @@
 
 {% if educations %}
  <div class="section educations">
-   <div class="header"><h3>Wykształcenie</h3></div>
+   <div class="header">
+     <h3>Wykształcenie</h3>
+     <a href="/#s" class="go_top" title="Powrót na początek strony">wróć</a>
+   </div>
    <div class="content">
      <div class="table education">
        {% for education in educations %}
@@ -62,6 +68,7 @@
   <div class="section experiences">
     <div class="header">
       <h3>Doświadczenie zawodowe</h3>
+      <a href="/#s" class="go_top" title="Powrót na początek strony">wróć</a>
     </div>
     <div class="content">
      <div class="table experience">
@@ -86,6 +93,7 @@
   <div class="section courses">
     <div class="header">
       <h3>Odbyte kursy</h3>
+      <a href="/#s" class="go_top" title="Powrót na początek strony">wróć</a>
     </div>
     <div class="content">
      <div class="table experience">
@@ -104,6 +112,7 @@
   <div class="section skills">
     <div class="header">
       <h3>Umiejętności</h3>
+      <a href="/#s" class="go_top" title="Powrót na początek strony">wróć</a>
     </div>
     <div class="content">
      {% for skill in skills %}
@@ -117,6 +126,7 @@
   <div class="section languages">
     <div class="header">
       <h3>Języki</h3>
+      <a href="/#s" class="go_top" title="Powrót na początek strony">wróć</a>
     </div>
     <div class="content">
       <ul>
@@ -132,6 +142,7 @@
   <div class="section interest">
     <div class="header">
       <h3>Zainteresowania</h3>
+      <a href="/#s" class="go_top" title="Powrót na początek strony">wróć</a>
     </div>
     <div class="content">
       {% for interest in interests %}

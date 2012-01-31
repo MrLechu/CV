@@ -20,12 +20,12 @@ $(document).ready(function(){
   
   $("#bookmark").toggle(function(){
     $(ajaxLoader).css('display','block');
-    $("#smenu").slideDown("slow",function() {ajaxLoader.css('display','none')});
-    $(this).animate({top: '+=130'}, 'slow', function(){$(this).css('display','block')});
+    $("#smenu").slideDown("fast",function() {ajaxLoader.css('display','none')});
+    $(this).animate({top: '+=130'}, '5000', function(){$(this).css('display','block')});
     
   }, function(){
      $(ajaxLoader).css('display','block');
-     $("#smenu").slideUp("slow",function() {$(ajaxLoader).css('display','none')});
-     $(this).animate({top: '-=130'}, 'slow', function(){$(this).css('display','block')});
+     $("#smenu").slideUp("fast",function() {$(ajaxLoader).css('display','none')});
+     $(this).animate({top: '-=130'}, '5000', function(){$(this).css('display','block')});
    });  
 });

@@ -53,7 +53,9 @@ body{background-color:#c1d7ff;min-width:855px;}
 #f p{padding:50px 0;font-size:11px;line-height:16px;}
 
 /* sections */
-.section .header h3{color:#4f81bd;font-size:20px;line-height:26px;font-family:Calibri,sans-serif;text-transform:uppercase;font-style:italic;border-bottom: 1px solid #4F81BD;width:600px;margin:50px 0 20px;}
+.section .header {border-bottom:1px solid #4F81BD;width:600px;margin:50px 0 0;}
+.section .header .go_top{display:block;float:right;font-size:12px;line-height:16px;margin:5px 0 0;}
+.section .header h3{color:#4f81bd;font-size:20px;line-height:26px;font-family:Calibri,sans-serif;text-transform:uppercase;font-style:italic;margin:0 0 5px;float:left;}
 .section .content ul{padding-left:18px;margin-top:5px;}
 .section .content ul li{list-style:disc;line-height:20px;margin-bottom:7px;}
 
@@ -70,7 +72,7 @@ table td{vertical-align:top;border:1px solid #4f81bd;padding:10px;}
 table td.date{width:160px;background-color:#eee;}
 table td.date strong{display:block;margin-top:5px;}*/
 
-.table{border:1px solid #4F81BD;border-bottom-width:0}
+.table{border:1px solid #4F81BD;border-bottom-width:0;margin:20px 0 0;}
 .row{clear:both;border:1px solid #4F81BD;background-color:#eee;border-width:1px 0;}
 .row.odd{border-top-width:0;}
 .row.even{border-top-width:0;}
